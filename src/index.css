@@ -1,0 +1,20 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Barlow+Condensed:wght@500;600;700;800&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    color-scheme: light dark;
+  }
+
+  body {
+    @apply bg-cream-50 text-navy-950 antialiased dark:bg-navy-950 dark:text-navy-50;
+    font-feature-settings: 'cv02', 'cv03', 'cv04', 'cv11';
+  }
+
+  ::selection {
+    @apply bg-rose-600/20 text-rose-800 dark:bg-rose-400/25 dark:text-rose-100;
+  }
+}

@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="color-scheme" content="light dark" />
+    <title>GBD Meter — Due Date Calculator</title>
+    <script>
+      (function () {
+        var stored = localStorage.getItem('gbd-theme');
+        var dark = stored ? stored === 'dark' : window.matchMedia('(prefers-color-scheme: dark)').matches;
+        document.documentElement.classList.toggle('dark', dark);
+      })();
+    </script>
+  </head>
+  <body>
+    <!--
+      THESIS: A clinical due-date tool where the input IS the wheel a clinician
+      already knows, not a form with date math bolted on.
+      OWN-WORLD: Solt Portfolio's condensed-bold/tracked-label rhythm, reskinned
+      dark-pink on warm cream (light) / near-black-navy-to-steel-blue (dark); one
+      rotary SVG dial, right-aligned stat ledger.
+      STORY: Clinician rotates the ring (or types) to the LMP, reads EDD,
+      gestational age and trimester instantly, sees the Naegele's-rule caveat.
+      FIRST VIEWPORT: wordmark + theme toggle; dial left, stat ledger right,
+      both above the fold on desktop.
+      FORM: user/brief-pinned direction (Solt Portfolio + supplied navy palette +
+      Facemama wheel) -- concept-seed roll skipped per new-work.md's pinned-
+      direction rule.
+      FINISH: unreviewed and undocumented is unfinished; this build ends with
+      the finish review, the verdict, and DESIGN.md.
+    -->
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
